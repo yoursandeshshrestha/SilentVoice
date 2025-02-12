@@ -2,7 +2,7 @@
 node_modules
 
 # TypeScript build files
-/dist
+dist
 
 # Prisma generated files
 /prisma/migrations
