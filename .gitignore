@@ -1,0 +1,30 @@
+# Node modules
+node_modules
+
+# TypeScript build files
+/dist
+
+# Prisma generated files
+/prisma/migrations
+/prisma/dev.db
+/prisma/.prisma
+
+# Logs
+*.log
+*.log.*
+
+# npm package lock
+package-lock.json
+
+# dotenv environment variable files
+.env
+
+# VS Code settings
+.vscode/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# TypeScript and JS build artifacts
+*.tsbuildinfo
