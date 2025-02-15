@@ -1,11 +1,13 @@
 import express, { Request, Response, NextFunction } from "express";
 import dotenv from "dotenv";
 import cors from "cors";
+import cookieParser from "cookie-parser";
 import { connectDB } from "./config/Database";
 
 dotenv.config();
 
 const app = express();
+
 const PORT: number = parseInt(process.env.PORT || "8000", 10);
 
 const allowedOrigins: string[] = process.env.ORIGIN
@@ -19,6 +21,8 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
+app.use(cookieParser());
+app.use(express.json());
 
 app.use((req: Request, res: Response, next: NextFunction) => {
   console.log(`got request with ${req.method} on ${req.url}`);
